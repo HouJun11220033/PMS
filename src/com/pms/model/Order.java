@@ -76,8 +76,8 @@ public class Order {
 		this.remark = remark;
 	}
 
-	public Order(String roomType, String phoneNum, String orderNum, Date startTime, Date endTime,
-			String price, int roomAmount, String remark) {
+	public Order(String roomType, String phoneNum, String orderNum, Date startTime, Date endTime, String price,
+			int roomAmount, String remark) {
 		super();
 		this.roomType = roomType;
 		this.phoneNum = phoneNum;
@@ -95,9 +95,9 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [roomType=" + roomType + ", phoneNum=" + phoneNum + ", orderNum=" + orderNum
-				+ ", startTime=" + startTime + ", endTime=" + endTime + ", price=" + price + ", roomAmount="
-				+ roomAmount + ", remark=" + remark + "]";
+		return "Order [roomType=" + roomType + ", phoneNum=" + phoneNum + ", orderNum=" + orderNum + ", startTime="
+				+ startTime + ", endTime=" + endTime + ", price=" + price + ", roomAmount=" + roomAmount + ", remark="
+				+ remark + "]";
 	}
 
 }

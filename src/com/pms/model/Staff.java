@@ -1,14 +1,31 @@
 package com.pms.model;
 
 public class Staff {
+	private Integer staffId;
 	private String name;
 	private String pwd;
 	private String phoneNum;
 	private int age;
 	private boolean sex;
-	private Integer idNum;
+	private Integer idCNum;
 	private Integer jobNum;
 	private String position;
+
+	public Integer getStaffId() {
+		return staffId;
+	}
+
+	public void setStaffId(Integer staffId) {
+		this.staffId = staffId;
+	}
+
+	public Integer getIdCNum() {
+		return idCNum;
+	}
+
+	public void setIdCNum(Integer idCNum) {
+		this.idCNum = idCNum;
+	}
 
 	public String getName() {
 		return name;
@@ -50,14 +67,6 @@ public class Staff {
 		this.sex = sex;
 	}
 
-	public Integer getIdNum() {
-		return idNum;
-	}
-
-	public void setIdNum(Integer idNum) {
-		this.idNum = idNum;
-	}
-
 	public Integer getJobNum() {
 		return jobNum;
 	}
@@ -82,7 +91,7 @@ public class Staff {
 		this.phoneNum = phoneNum;
 		this.age = age;
 		this.sex = sex;
-		this.idNum = idNum;
+
 		this.jobNum = jobNum;
 		this.position = position;
 	}
@@ -94,7 +103,7 @@ public class Staff {
 	@Override
 	public String toString() {
 		return "Staff [name=" + name + ", pwd=" + pwd + ", phoneNum=" + phoneNum + ", age=" + age + ", sex="
-				+ sex + ", idNum=" + idNum + ", jobNum=" + jobNum + ", position=" + position + "]";
+				+ sex + ", idNum=" + ", jobNum=" + jobNum + ", position=" + position + "]";
 	}
 
 }

@@ -1,12 +1,20 @@
 package com.pms.model;
 
 public class Room {
+	private Integer roomId;
 	private String roomType;
 	private String roomPrice;
 	private String roomNum;
-	private String roomAmount;
 	private String roomState;
 	private String roomHyg;
+
+	public Integer getRoomId() {
+		return roomId;
+	}
+
+	public void setRoomId(Integer roomId) {
+		this.roomId = roomId;
+	}
 
 	public String getRoomType() {
 		return roomType;
@@ -32,14 +40,6 @@ public class Room {
 		this.roomNum = roomNum;
 	}
 
-	public String getRoomAmount() {
-		return roomAmount;
-	}
-
-	public void setRoomAmount(String roomAmount) {
-		this.roomAmount = roomAmount;
-	}
-
 	public String getRoomState() {
 		return roomState;
 	}
@@ -62,7 +62,7 @@ public class Room {
 		this.roomType = roomType;
 		this.roomPrice = roomPrice;
 		this.roomNum = roomNum;
-		this.roomAmount = roomAmount;
+
 		this.roomState = roomState;
 		this.roomHyg = roomHyg;
 
@@ -75,7 +75,7 @@ public class Room {
 	@Override
 	public String toString() {
 		return "Room [roomType=" + roomType + ", roomPrice=" + roomPrice + ", roomNum=" + roomNum
-				+ ", roomAmount=" + roomAmount + ", roomState=" + roomState + ", roomHyg=" + roomHyg + "]";
+				+ ", roomAmount=" + ", roomState=" + roomState + ", roomHyg=" + roomHyg + "]";
 	}
 
 }

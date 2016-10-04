@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2016 7:02:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pms.model.Room" table="ROOM">
+        <id name="roomId" type="java.lang.Integer">
+            <column name="ROOMID" />
+            <generator class="assigned" />
+        </id>
+        <property name="roomType" type="java.lang.String">
+            <column name="ROOMTYPE" />
+        </property>
+        <property name="roomPrice" type="java.lang.String">
+            <column name="ROOMPRICE" />
+        </property>
+        <property name="roomNum" type="java.lang.String">
+            <column name="ROOMNUM" />
+        </property>
+        <property name="roomState" type="java.lang.String">
+            <column name="ROOMSTATE" />
+        </property>
+        <property name="roomHyg" type="java.lang.String">
+            <column name="ROOMHYG" />
+        </property>
+    </class>
+</hibernate-mapping>

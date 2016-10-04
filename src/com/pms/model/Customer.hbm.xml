@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.pms.model.Customer" table="CUSTOMER">
+		<id name="idNum" type="java.lang.Integer">
+			<column name="IDNUM" />
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="pwd" type="java.lang.String">
+			<column name="PWD" />
+		</property>
+		<property name="phoneNum" type="java.lang.String">
+			<column name="PHONENUM" />
+		</property>
+		<property name="age" type="int">
+			<column name="AGE" />
+		</property>
+		<property name="sex" type="boolean">
+			<column name="SEX" />
+		</property>
+	</class>
+</hibernate-mapping>
