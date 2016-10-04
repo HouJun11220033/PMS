@@ -10,12 +10,11 @@ public class HibernateUtil {
 	private static final SessionFactory sessionFactory;
 	static {
 		Configuration configuration = new Configuration().configure();
-		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-				.applySettings(configuration.getProperties()).build();
+		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
+				configuration.getProperties()).build();
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 	}
 
-	// 静态方法，直接拿类名调用
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
