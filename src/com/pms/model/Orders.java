@@ -2,15 +2,37 @@ package com.pms.model;
 
 import java.util.Date;
 
-public class Order {
+public class Orders {
+	private Integer orderId;
+	private String roomNum;
 	private String roomType;
 	private String phoneNum;
 	private String orderNum;
 	private Date startTime;
 	private Date endTime;
 	private String price;
-	private int roomAmount;
+	private Integer roomAmount;
 	private String remark;
+
+	public void setRoomAmount(Integer roomAmount) {
+		this.roomAmount = roomAmount;
+	}
+
+	public Integer getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
+	}
+
+	public String getRoomNum() {
+		return roomNum;
+	}
+
+	public void setRoomNum(String roomNum) {
+		this.roomNum = roomNum;
+	}
 
 	public String getRoomType() {
 		return roomType;
@@ -76,8 +98,8 @@ public class Order {
 		this.remark = remark;
 	}
 
-	public Order(String roomType, String phoneNum, String orderNum, Date startTime, Date endTime, String price,
-			int roomAmount, String remark) {
+	public Orders(String roomType, String phoneNum, String orderNum, Date startTime, Date endTime,
+			String price, int roomAmount, String remark) {
 		super();
 		this.roomType = roomType;
 		this.phoneNum = phoneNum;
@@ -89,15 +111,15 @@ public class Order {
 		this.remark = remark;
 	}
 
-	public Order() {
+	public Orders() {
 		super();
 	}
 
 	@Override
 	public String toString() {
-		return "Order [roomType=" + roomType + ", phoneNum=" + phoneNum + ", orderNum=" + orderNum + ", startTime="
-				+ startTime + ", endTime=" + endTime + ", price=" + price + ", roomAmount=" + roomAmount + ", remark="
-				+ remark + "]";
+		return "Order [roomType=" + roomType + ", phoneNum=" + phoneNum + ", orderNum=" + orderNum
+				+ ", startTime=" + startTime + ", endTime=" + endTime + ", price=" + price + ", roomAmount="
+				+ roomAmount + ", remark=" + remark + "]";
 	}
 
 }
