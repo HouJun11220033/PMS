@@ -4,10 +4,14 @@
 
 <hibernate-mapping>
 	<class name="com.pms.model.Customer" table="CUSTOMER">
-		<id name="idNum" type="java.lang.Integer">
-			<column name="IDNUM" />
+		<id name="customerId" type="java.lang.Integer">
+			<column name="CUSTOMER_ID" />
 			<generator class="assigned" />
 		</id>
+
+		<property name="idNum" type="java.lang.Integer">
+			<column name="ID_NUM" />
+		</property>
 		<property name="name" type="java.lang.String">
 			<column name="NAME" />
 		</property>
@@ -15,7 +19,7 @@
 			<column name="PWD" />
 		</property>
 		<property name="phoneNum" type="java.lang.String">
-			<column name="PHONENUM" />
+			<column name="PHONE_NUM" />
 		</property>
 		<property name="age" type="int">
 			<column name="AGE" />

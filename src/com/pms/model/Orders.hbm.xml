@@ -2,38 +2,41 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 4, 2016 10:11:01 PM by Hibernate Tools 3.5.0.Final -->
-<hibernate-mapping>
-	<class name="com.pms.model.Orders" table="ORDERS">
+<hibernate-mapping package="com.pms.model">
+	<class name="Orders" table="ORDERS">
 		<id name="orderId" type="java.lang.Integer">
-			<column name="ORDERID" />
+			<column name="ORDER_ID" />
 			<generator class="assigned" />
 		</id>
+		<property name="orderNum" type="java.lang.String">
+			<column name="ORDER_NUM" />
+		</property>
 		<property name="roomNum" type="java.lang.String">
-			<column name="ROOMNUM" />
+			<column name="ROOM_NUM" />
 		</property>
 		<property name="roomType" type="java.lang.String">
-			<column name="ROOMTYPE" />
+			<column name="ROOM_TYPE" />
 		</property>
 		<property name="phoneNum" type="java.lang.String">
-			<column name="PHONENUM" />
+			<column name="PHONE_NUM" />
 		</property>
-		<property name="orderNum" type="java.lang.String">
-			<column name="ORDERNUM" />
-		</property>
+
 		<property name="startTime" type="java.util.Date">
-			<column name="STARTTIME" />
+			<column name="START_TIME" />
 		</property>
 		<property name="endTime" type="java.util.Date">
-			<column name="ENDTIME" />
+			<column name="END_TIME" />
 		</property>
 		<property name="price" type="java.lang.String">
 			<column name="PRICE" />
 		</property>
 		<property name="roomAmount" type="java.lang.Integer">
-			<column name="ROOMAMOUNT" />
+			<column name="ROOM_AMOUNT" />
 		</property>
 		<property name="remark" type="java.lang.String">
 			<column name="REMARK" />
 		</property>
+		<many-to-one name="customer" class="Customer" column="CUSTOMER_ID"></many-to-one>
+
 	</class>
 </hibernate-mapping>

@@ -13,6 +13,15 @@ public class Orders {
 	private String price;
 	private Integer roomAmount;
 	private String remark;
+	private Customer customer;
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 
 	public void setRoomAmount(Integer roomAmount) {
 		this.roomAmount = roomAmount;
