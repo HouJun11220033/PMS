@@ -5,7 +5,7 @@
 	<class name="Room" table="ROOM">
 		<id name="roomId" type="java.lang.Integer">
 			<column name="ROOM_ID" />
-			<generator class="assigned" />
+			<generator class="native" />
 		</id>
 		<property name="roomType" type="java.lang.String">
 			<column name="ROOM_TYPE" />

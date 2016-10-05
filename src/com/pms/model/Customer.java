@@ -2,12 +2,12 @@ package com.pms.model;
 
 public class Customer {
 	private Integer customerId;
+	private Integer idNum;
 	private String name;
 	private String pwd;
 	private String phoneNum;
 	private int age;
 	private boolean sex;
-	private Integer idNum;
 
 	public Integer getCustomerId() {
 		return customerId;

@@ -6,7 +6,7 @@
 	<class name="com.pms.model.Customer" table="CUSTOMER">
 		<id name="customerId" type="java.lang.Integer">
 			<column name="CUSTOMER_ID" />
-			<generator class="assigned" />
+			<generator class="native" />
 		</id>
 
 		<property name="idNum" type="java.lang.Integer">

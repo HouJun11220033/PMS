@@ -11,6 +11,8 @@ public class Test {
 	@RequestMapping("/test")
 	public String test() {
 		System.out.println("Spring !!!");
-		return SUCCESS;
+		return "index";
+		// return "login";
+		// return SUCCESS;
 	}
 }

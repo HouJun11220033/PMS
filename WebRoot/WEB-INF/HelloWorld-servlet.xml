@@ -19,6 +19,9 @@
 		<property name="basename" value="i18n"></property>
 	</bean>
 	<mvc:view-controller path="/success" view-name="success" />
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/css/" mapping="/css/**" />
 	<mvc:annotation-driven />
 
 

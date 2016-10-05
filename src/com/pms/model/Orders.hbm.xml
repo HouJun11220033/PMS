@@ -6,7 +6,7 @@
 	<class name="Orders" table="ORDERS">
 		<id name="orderId" type="java.lang.Integer">
 			<column name="ORDER_ID" />
-			<generator class="assigned" />
+			<generator class="native" />
 		</id>
 		<property name="orderNum" type="java.lang.String">
 			<column name="ORDER_NUM" />
