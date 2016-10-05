@@ -19,6 +19,6 @@
 <body>
 	This is my JSP page.
 	<br>
-	<a href="pms/test">test</a>
+	<a href="pms/enter">Enter</a>
 </body>
 </html>

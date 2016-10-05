@@ -1,7 +1,7 @@
 package com.pms.model;
 
 public class Customer {
-	private Integer customerId;
+	private Integer id;
 	private Integer idNum;
 	private String name;
 	private String pwd;
@@ -9,12 +9,12 @@ public class Customer {
 	private int age;
 	private boolean sex;
 
-	public Integer getCustomerId() {
-		return customerId;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {

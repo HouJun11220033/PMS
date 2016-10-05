@@ -1,7 +1,7 @@
 package com.pms.model;
 
 public class Room {
-	private Integer roomId;
+	private Integer id;
 	private String roomType;
 	private String roomPrice;
 	private String roomNum;
@@ -9,20 +9,20 @@ public class Room {
 	private String roomHyg;
 	private Orders orders;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public Orders getOrders() {
 		return orders;
 	}
 
 	public void setOrders(Orders orders) {
 		this.orders = orders;
-	}
-
-	public Integer getRoomId() {
-		return roomId;
-	}
-
-	public void setRoomId(Integer roomId) {
-		this.roomId = roomId;
 	}
 
 	public String getRoomType() {

@@ -1,7 +1,7 @@
 package com.pms.model;
 
 public class Staff {
-	private Integer staffId;
+	private Integer id;
 	private String name;
 	private String pwd;
 	private String phoneNum;
@@ -11,12 +11,12 @@ public class Staff {
 	private Integer jobNum;
 	private String position;
 
-	public Integer getStaffId() {
-		return staffId;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setStaffId(Integer staffId) {
-		this.staffId = staffId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Integer getIdCNum() {

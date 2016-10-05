@@ -31,7 +31,7 @@ public interface DaoSupport<T> {
 	 * @return
 	 */
 
-	void getById(Integer id);
+	T getById(Integer id);
 
 	/**
 	 * 按id查询

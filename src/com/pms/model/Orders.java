@@ -3,7 +3,8 @@ package com.pms.model;
 import java.util.Date;
 
 public class Orders {
-	private Integer orderId;
+	private Integer id;
+
 	private String roomNum;
 	private String roomType;
 	private String phoneNum;
@@ -15,6 +16,14 @@ public class Orders {
 	private String remark;
 	private Customer customer;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -25,14 +34,6 @@ public class Orders {
 
 	public void setRoomAmount(Integer roomAmount) {
 		this.roomAmount = roomAmount;
-	}
-
-	public Integer getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
 	}
 
 	public String getRoomNum() {
