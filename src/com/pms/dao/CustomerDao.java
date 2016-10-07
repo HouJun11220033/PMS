@@ -1,5 +1,5 @@
 package com.pms.dao;
 
-public class CustomerDao {
+public interface CustomerDao {
 
 }

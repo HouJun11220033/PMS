@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.pms.model.Customer;
+
 public class Generate {
 	private SessionFactory sessionFactory;
 	private Session session;
@@ -53,16 +55,16 @@ public class Generate {
 
 	@Test
 	public void generateDB() {
-		// Customer customer = new Customer();
-		// customer.setAge(2);
-		// // customer.setCustomerId(188);
-		// customer.setIdNum("12312312213");
-		// customer.setName("HouJun");
-		// customer.setPhoneNum("12312");
-		// customer.setPwd("1232121");
-		// customer.setSex(false);
+		Customer customer = new Customer();
+		customer.setAge(20);
+		// customer.setCustomerId(188);
+		customer.setIdNum("123");
+		customer.setName("HouJun");
+		customer.setPhoneNum("13069316562");
+		customer.setPwd("21232f297a57a5a743894a0e4a801fc3");
+		customer.setSex(true);
 		// session.flush();
-		// session.save(customer);
+		session.save(customer);
 
 	}
 

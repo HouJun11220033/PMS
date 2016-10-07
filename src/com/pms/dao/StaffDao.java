@@ -1,5 +1,5 @@
 package com.pms.dao;
 
-public class StaffDao {
+public interface StaffDao {
 
 }

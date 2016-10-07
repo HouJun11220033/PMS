@@ -4,6 +4,6 @@ import com.pms.base.DaoSupport;
 import com.pms.model.Customer;
 
 public interface CustomerService extends DaoSupport<Customer> {
-	public Customer findByLoginNameAndPassword(String userName, String passWord);
+	public Customer findByLoginNameAndPassword(String idNum, String pwd);
 
 }
