@@ -13,13 +13,16 @@ public class HibernateUtil {
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
 				configuration.getProperties()).build();
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		System.out.println("init!!!");
 	}
 
 	public static SessionFactory getSessionFactory() {
+		System.out.println("sessionFactory!!!");
 		return sessionFactory;
 	}
 
 	public static Session getSession() {
+		System.out.println("session!!!");
 		return sessionFactory.openSession();
 	}
 

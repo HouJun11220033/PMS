@@ -7,8 +7,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.pms.model.Customer;
-
 public class Generate {
 	private SessionFactory sessionFactory;
 	private Session session;
@@ -37,7 +35,8 @@ public class Generate {
 		sessionFactory = HibernateUtil.getSessionFactory();
 		session = HibernateUtil.getSession();
 		transaction = session.beginTransaction();
-		System.out.println("init!!!!!!!!!!!!!!");
+		System.out.println(transaction.toString());
+		System.out.println("init");
 	}
 
 	@After
@@ -48,21 +47,22 @@ public class Generate {
 		transaction.commit();
 		session.close();
 		sessionFactory.close();
-		System.out.println("destory!!!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("destory");
 
 	}
 
 	@Test
 	public void generateDB() {
-		Customer customer = new Customer();
-		customer.setAge(2);
-		// customer.setCustomerId(188);
-		customer.setIdNum(67);
-		customer.setName("HouJun");
-		customer.setPhoneNum("12312");
-		customer.setPwd("1232121");
-		customer.setSex(false);
-		session.save(customer);
+		// Customer customer = new Customer();
+		// customer.setAge(2);
+		// // customer.setCustomerId(188);
+		// customer.setIdNum("12312312213");
+		// customer.setName("HouJun");
+		// customer.setPhoneNum("12312");
+		// customer.setPwd("1232121");
+		// customer.setSex(false);
+		// session.flush();
+		// session.save(customer);
 
 	}
 

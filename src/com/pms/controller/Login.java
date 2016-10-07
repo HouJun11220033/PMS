@@ -1,6 +1,7 @@
 package com.pms.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ public class Login {
 	private static final String SUCCESS = "success";
 
 	@RequestMapping("/login")
-	public String login(HttpServletRequest request) {
+	public String login(HttpServletRequest request, HttpServletResponse response) {
 		String userName = request.getParameter("username");
 		String passWord = request.getParameter("password");
 

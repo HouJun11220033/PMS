@@ -2,12 +2,20 @@ package com.pms.model;
 
 public class Customer {
 	private Integer id;
-	private Integer idNum;
+	private String idNum;
 	private String name;
 	private String pwd;
 	private String phoneNum;
 	private int age;
 	private boolean sex;
+
+	public String getIdNum() {
+		return idNum;
+	}
+
+	public void setIdNum(String idNum) {
+		this.idNum = idNum;
+	}
 
 	public Integer getId() {
 		return id;
@@ -57,15 +65,7 @@ public class Customer {
 		this.sex = sex;
 	}
 
-	public Integer getIdNum() {
-		return idNum;
-	}
-
-	public void setIdNum(Integer idNum) {
-		this.idNum = idNum;
-	}
-
-	public Customer(String name, String pwd, String phoneNum, int age, boolean sex, Integer idNum) {
+	public Customer(String name, String pwd, String phoneNum, int age, boolean sex, String idNum) {
 		super();
 		this.name = name;
 		this.pwd = pwd;
