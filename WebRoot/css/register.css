@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+body{
+	padding-top:50px;
+	line-height:50px;
+	font-size:12px;
+    font-family:Microsoft YaHei;
+}
+form{
+	border: 2px;
+}
+.left{
+		display:block;
+		float:left;
+		width: 80px;
+	 	padding-left: 2px;
+		font-size:10pt;font-family:Microsoft YaHei;
+		alignment-baseline:middle;
+	
+	}
+	.submit{
+		margin-top:40px;
+		margin-left:250px;
+		alignment-adjust:central;
+	}
+	.button{
+		 font:10pt;
+		 font-family: Microsoft YaHei ;
+		 color:#FFF;
+		 background-color:#03C;
+		 
+		}
+	select option{
+		font-size:10px;
+		font-family:Microsoft YaHei;
+	}
