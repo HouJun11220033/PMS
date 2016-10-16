@@ -11,6 +11,20 @@ public class Staff {
 	private String jobNum;
 	private String position;
 
+	public Staff(Integer id, String name, String pwd, String phoneNum, int age, boolean sex, String idCNum,
+			String jobNum, String position) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.pwd = pwd;
+		this.phoneNum = phoneNum;
+		this.age = age;
+		this.sex = sex;
+		this.idCNum = idCNum;
+		this.jobNum = jobNum;
+		this.position = position;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -101,8 +115,9 @@ public class Staff {
 
 	@Override
 	public String toString() {
-		return "Staff [name=" + name + ", pwd=" + pwd + ", phoneNum=" + phoneNum + ", age=" + age + ", sex="
-				+ sex + ", idNum=" + ", jobNum=" + jobNum + ", position=" + position + "]";
+		return "Staff [id=" + id + ", name=" + name + ", pwd=" + pwd + ", phoneNum=" + phoneNum + ", age="
+				+ age + ", sex=" + sex + ", idCNum=" + idCNum + ", jobNum=" + jobNum + ", position="
+				+ position + "]";
 	}
 
 }

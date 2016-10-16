@@ -4,13 +4,16 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.junit.Test;
+import org.springframework.stereotype.Service;
 
+import com.pms.base.DaoSupportImpl;
 import com.pms.hibernateutil.HibernateUtil;
 import com.pms.model.Staff;
+import com.pms.service.StaffService;
 
-//public class StaffServiceImpl extends DaoSupportImpl<Staff> implements StaffService {
-public class StaffServiceImpl {
+@Service
+public class StaffServiceImpl extends DaoSupportImpl<Staff> implements StaffService {
+
 	private SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	private Session session;
 	private Transaction transaction = HibernateUtil.getSession().beginTransaction();
@@ -22,22 +25,28 @@ public class StaffServiceImpl {
 
 	}
 
-	@Test
-	public void registerInfo(String userName, String passWord, String position, boolean sex, String IDCard,
-			String phoneNum) {
-		Staff staff = new Staff();
-		staff.setJobNum(userName);
-		staff.setPwd(passWord);
-		staff.setPosition(position);
-		staff.setSex(sex);
-		staff.setIdCNum(IDCard);
-		staff.setPhoneNum(phoneNum);
-		staff.setAge(17);
-		staff.setName("AAA");
+	public void registerInfo(Staff staff) {
+		session = HibernateUtil.getSession();
 
-		HibernateUtil.getSession().save(staff);
+		session.save(staff);
 		transaction.commit();
+		System.out.println("commit !!!");
 
+	}
+
+	public void saveStaff(Staff staff) {
+		try {
+			session = HibernateUtil.getSession(); // get Session
+			transaction = session.beginTransaction(); // begin Session
+			session.save(staff); // save to DATABASE smw
+			transaction.commit(); // commit transaction
+			System.out.println("commit !!!");
+		} catch (Exception e) {
+			System.out.println("staffDAO failure !");
+			transaction.rollback(); // roll back transaction
+		} finally {
+			HibernateUtil.closeSession(session); // close session
+		}
 	}
 
 }
