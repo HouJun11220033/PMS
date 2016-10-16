@@ -46,7 +46,8 @@ public class RegisterController {
 		}
 		staff.setSex(sexBoolean);
 
-		staffServiceImpl.saveStaff(staff);
+		// staffServiceImpl.saveStaff(staff);
+		staffServiceImpl.registerInfo(staff);
 		System.out.println("入库成功！");
 		// System.out.println(userName);
 

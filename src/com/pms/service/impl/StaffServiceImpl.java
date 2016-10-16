@@ -26,11 +26,19 @@ public class StaffServiceImpl extends DaoSupportImpl<Staff> implements StaffServ
 	}
 
 	public void registerInfo(Staff staff) {
-		session = HibernateUtil.getSession();
+		try {
+			session = HibernateUtil.getSession();
+			transaction = session.beginTransaction();
+			session.save(staff);
+			transaction.commit();
 
-		session.save(staff);
-		transaction.commit();
-		System.out.println("commit !!!");
+		} catch (Exception e) {
+			System.out.println("staffDAO failure !");
+			transaction.rollback(); // roll back transaction
+
+		} finally {
+			HibernateUtil.closeSession(session); // close session
+		}
 
 	}
 
