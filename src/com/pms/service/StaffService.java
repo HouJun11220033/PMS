@@ -6,7 +6,7 @@ import com.pms.model.Staff;
 public interface StaffService extends DaoSupport<Staff> {
 	public Staff findByLoginNameAndPassword(String idNum, String pwd);
 
-	public Staff registerInfo(String userName, String passWord, String position, boolean sex, String IDCard,
+	public void registerInfo(String userName, String passWord, String position, boolean sex, String IDCard,
 			String phoneNum);
 
 }

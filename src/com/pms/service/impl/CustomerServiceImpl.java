@@ -1,12 +1,16 @@
 package com.pms.service.impl;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.pms.base.DaoSupportImpl;
 import com.pms.hibernateutil.HibernateUtil;
 import com.pms.model.Customer;
 import com.pms.service.CustomerService;
 
+@Service
+@Transactional
 public class CustomerServiceImpl extends DaoSupportImpl<Customer> implements CustomerService {
 
 	@Override

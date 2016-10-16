@@ -14,23 +14,6 @@ public class Generate {
 	private Session session;
 	private Transaction transaction;
 
-	// @Before
-	// public void init() {
-	// Configuration configuration = new Configuration().configure();
-	// ServiceRegistry serviceRegistry = new
-	// ServiceRegistryBuilder().applySettings(
-	// configuration.getProperties()).build();
-	// sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-	// session = sessionFactory.openSession();
-	// transaction = session.beginTransaction();
-	// }
-	//
-	// @After
-	// public void destroy() {
-	// transaction.commit();
-	// session.close();
-	// sessionFactory.close();
-	// }
 
 	@Before
 	public void init() {

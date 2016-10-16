@@ -4,8 +4,11 @@ import java.lang.reflect.ParameterizedType;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.pms.hibernateutil.HibernateUtil;
 
+@Transactional
 public class DaoSupportImpl<T> implements DaoSupport<T> {
 
 	private Class<T> clazz;
