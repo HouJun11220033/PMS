@@ -7,8 +7,8 @@ public class Staff {
 	private String phoneNum;
 	private int age;
 	private boolean sex;
-	private Integer idCNum;
-	private Integer jobNum;
+	private String idCNum;
+	private String jobNum;
 	private String position;
 
 	public Integer getId() {
@@ -17,14 +17,6 @@ public class Staff {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Integer getIdCNum() {
-		return idCNum;
-	}
-
-	public void setIdCNum(Integer idCNum) {
-		this.idCNum = idCNum;
 	}
 
 	public String getName() {
@@ -67,14 +59,6 @@ public class Staff {
 		this.sex = sex;
 	}
 
-	public Integer getJobNum() {
-		return jobNum;
-	}
-
-	public void setJobNum(Integer jobNum) {
-		this.jobNum = jobNum;
-	}
-
 	public String getPosition() {
 		return position;
 	}
@@ -92,12 +76,27 @@ public class Staff {
 		this.age = age;
 		this.sex = sex;
 
-		this.jobNum = jobNum;
 		this.position = position;
 	}
 
 	public Staff() {
 		super();
+	}
+
+	public String getIdCNum() {
+		return idCNum;
+	}
+
+	public void setIdCNum(String idCNum) {
+		this.idCNum = idCNum;
+	}
+
+	public String getJobNum() {
+		return jobNum;
+	}
+
+	public void setJobNum(String jobNum) {
+		this.jobNum = jobNum;
 	}
 
 	@Override

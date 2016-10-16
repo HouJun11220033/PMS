@@ -23,10 +23,10 @@
 		<property name="sex" type="boolean">
 			<column name="SEX" />
 		</property>
-		<property name="idCNum" type="java.lang.Integer">
+		<property name="idCNum" type="java.lang.String">
 			<column name="IDCNUM" />
 		</property>
-		<property name="jobNum" type="java.lang.Integer">
+		<property name="jobNum" type="java.lang.String">
 			<column name="JOBNUM" />
 		</property>
 		<property name="position" type="java.lang.String">

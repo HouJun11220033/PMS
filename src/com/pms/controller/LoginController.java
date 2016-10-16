@@ -11,7 +11,7 @@ import com.pms.service.impl.CustomerServiceImpl;
 
 @Controller
 @RequestMapping("/pms")
-public class Login {
+public class LoginController {
 	private static final String SUCCESS = "success";
 	CustomerServiceImpl customerService = new CustomerServiceImpl();
 
