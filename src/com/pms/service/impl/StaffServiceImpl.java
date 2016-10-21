@@ -14,20 +14,17 @@ import com.pms.service.StaffService;
 
 @Service
 @Transactional
-public class StaffServiceImpl extends DaoSupportImpl<Staff> implements
-		StaffService {
+public class StaffServiceImpl extends DaoSupportImpl<Staff> implements StaffService {
 
 	private SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	private Session session;
-	private Transaction transaction = HibernateUtil.getSession()
-			.beginTransaction();
+	private Transaction transaction = HibernateUtil.getSession().beginTransaction();
 
 	public Staff findByLoginNameAndPassword(String idCNum, String pwd) {
 		System.out.println("!!!!!!!!!");
 		String passWord_MD5 = DigestUtils.md5Hex(pwd);
 		System.out.println("加密成功");
-		return (Staff) HibernateUtil.getSession()
-				.createQuery("FROM Staff s WHERE s.idCNum=? AND s.pwd=?")
+		return (Staff) HibernateUtil.getSession().createQuery("FROM Staff s WHERE s.idCNum=? AND s.pwd=?")
 				.setParameter(0, idCNum).setParameter(1, passWord_MD5).uniqueResult();
 
 	}

@@ -6,9 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.pms.model.Customer;
 import com.pms.model.Staff;
-
 import com.pms.service.impl.StaffServiceImpl;
 
 @Controller
@@ -18,16 +16,17 @@ public class LoginController {
 
 	// @Autowired
 	// CustomerServiceImpl customerService;
-	StaffServiceImpl staffServiceImpl;
+	// @Autowired
+	StaffServiceImpl staffServiceImpl = new StaffServiceImpl();
 
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request, HttpServletResponse response) {
-		Staff staff = new Staff();
+		Staff staff;
 		String userName = request.getParameter("username");
 		String passWord = request.getParameter("password");
 		System.out.println(userName);
 		System.out.println(passWord);
-		//staffServiceImpl.show();
+		staffServiceImpl.show();
 		staff = staffServiceImpl.findByLoginNameAndPassword(userName, passWord);
 		if (staff != null) {
 
