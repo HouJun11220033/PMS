@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pms.model.Customer;
-import com.pms.service.impl.CustomerServiceImpl;
+import com.pms.model.Staff;
+
+import com.pms.service.impl.StaffServiceImpl;
 
 @Controller
 @RequestMapping("/pms")
@@ -15,17 +17,19 @@ public class LoginController {
 	private static final String SUCCESS = "success";
 
 	// @Autowired
-	CustomerServiceImpl customerService;
+	// CustomerServiceImpl customerService;
+	StaffServiceImpl staffServiceImpl;
 
 	@RequestMapping("/login")
 	public String login(HttpServletRequest request, HttpServletResponse response) {
-		Customer customer = new Customer();
+		Staff staff = new Staff();
 		String userName = request.getParameter("username");
 		String passWord = request.getParameter("password");
 		System.out.println(userName);
 		System.out.println(passWord);
-		customer = customerService.findByLoginNameAndPassword(userName, passWord);
-		if (customer != null) {
+		//staffServiceImpl.show();
+		staff = staffServiceImpl.findByLoginNameAndPassword(userName, passWord);
+		if (staff != null) {
 
 			System.out.println("登陆成功 !!!");
 			return SUCCESS;

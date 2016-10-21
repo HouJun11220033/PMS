@@ -1,8 +1,10 @@
 package com.pms.controller;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -24,7 +26,8 @@ public class RegisterController {
 	}
 
 	@RequestMapping("/submitData")
-	public String registerOK(HttpServletRequest request, HttpServletResponse response) {
+	public String registerOK(HttpServletRequest request,
+			HttpServletResponse response) {
 		Boolean sexBoolean;
 		String userName = request.getParameter("username");
 		// System.out.println(userName);
@@ -34,12 +37,14 @@ public class RegisterController {
 		String idCardNum = request.getParameter("idCardNum");
 		String phoneNum = request.getParameter("phoneNum");
 		// System.out.println(phoneNum);
+		String passWord_MD5 = DigestUtils.md5Hex(passWord);
 		Staff staff = new Staff();
 		staff.setIdCNum(userName);
-		staff.setPwd(passWord);
-		staff.setPosition(position);
+		staff.setPwd(passWord_MD5);
+		staff.setPosition(position.toString());
 
 		if (sex == "男") {
+
 			sexBoolean = true;
 		} else {
 			sexBoolean = false;
@@ -48,7 +53,7 @@ public class RegisterController {
 
 		// staffServiceImpl.saveStaff(staff);
 		staffServiceImpl.registerInfo(staff);
-		System.out.println("入库成功！");
+		System.out.println("Insert Success !!!");
 		// System.out.println(userName);
 
 		return "success";
