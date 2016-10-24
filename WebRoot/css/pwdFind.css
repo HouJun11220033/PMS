@@ -1,0 +1,13 @@
+html{
+	margin: 0;
+	padding: 0;
+	background-color: cornflowerblue;
+}
+#body{
+	padding-top: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+h3{
+	margin-left: 100px;
+}
