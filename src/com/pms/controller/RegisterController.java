@@ -1,7 +1,6 @@
 package com.pms.controller;
 
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -26,8 +25,7 @@ public class RegisterController {
 	}
 
 	@RequestMapping("/submitData")
-	public String registerOK(HttpServletRequest request,
-			HttpServletResponse response) {
+	public String registerOK(HttpServletRequest request, HttpServletResponse response) {
 		Boolean sexBoolean;
 		String userName = request.getParameter("username");
 		// System.out.println(userName);

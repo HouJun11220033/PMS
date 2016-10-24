@@ -8,6 +8,10 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext.xml</param-value>
+	</context-param>
 	<!-- 解决乱码问题 -->
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
