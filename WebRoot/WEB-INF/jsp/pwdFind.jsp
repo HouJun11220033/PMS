@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%
 	String path = request.getContextPath();
@@ -15,11 +16,12 @@
 </head>
 <body>
 	<h3>密码找回</h3>
-	<form action="show">
+	<form action="show" method="post">
 	<div id="body">
 		请输入你的手机号码：<input type="text" name="phnumber" / id="phnum"><br /> 请输入你的身份证号码：<input
 			type="text" name="idnumber" id="idnum" /><br /> <input type="submit" name="submit" value="提交"
 			/>
+			${hint}
 		
 	</div>
 	</form>

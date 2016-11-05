@@ -14,9 +14,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<form class="form-horizontal" action="">
+			<form class="form-horizontal" action="" method="post">
 				<div class="control-group">
 					<label class="control-label" for="inputEmail">新密码</label>
+					
 					<div class="controls">
 						<input id="inputEmail" name="newPwd" type="text" />
 					</div>
