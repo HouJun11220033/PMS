@@ -6,19 +6,13 @@
  */
 package com.pms.controller;
 
-import java.util.Map;
-
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
-import javax.servlet.http.HttpServletResponse;
-
-import org.hibernate.loader.plan.exec.process.spi.ReturnReader;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.portlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
+
 import com.pms.service.impl.StaffServiceImpl;
 
 @Controller
@@ -34,28 +28,32 @@ public class PwdFind {
 
 	@RequestMapping("/show")
 	public String showPwd(HttpServletRequest request) {
+		ServletContext servletContext = request.getServletContext();
 		ModelMap model = new ModelMap();
 		boolean flag = false;
 		String phoneNum;
 		String idNum;
 		String hint;
-		hint = "请重新输入电话号码和身份证信息";
+		// hint = "请重新输入电话号码和身份证信息";
 		phoneNum = request.getParameter("phnumber");
 		idNum = request.getParameter("idnumber");
 		flag = staffServiceImpl.findIdNumByPhoneNum(phoneNum, idNum);
+		servletContext.setAttribute("hint", "");
 		if (flag == true) {
 			// model = new ModelAndView("modifyPwd");
-			//model.put("", value);
-			//return new ModelAndView(new RedirectView("modifyPwd.jsp"));
+			// model.put("", value);
+			// return new ModelAndView(new RedirectView("modifyPwd.jsp"));
 			return "modifyPwd";
-			
+
 		} else {
 			// model = new ModelAndView("pwdFind");
 			model.put("hint", "请重新输入电话号码和身份证信息");
-			//model.addObject("hint", "请重新输入电话号码和身份证信息");
+			// model.addObject("hint", "请重新输入电话号码和身份证信息");
+
+			servletContext.setAttribute("hint", "请重新输入电话号码和身份证信息");
 
 			System.out.println("请重新输入电话号码和身份证信息");
-			//return new ModelAndView(new RedirectView("pwdFind.jsp"));
+			// return new ModelAndView(new RedirectView("pwdFind.jsp"));
 			return "pwdFind";
 		}
 		// return model;
