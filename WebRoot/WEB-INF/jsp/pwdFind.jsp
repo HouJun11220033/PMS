@@ -15,11 +15,15 @@
 </head>
 <body>
 	<h3>密码找回</h3>
+	<form action="show">
 	<div id="body">
 		请输入你的手机号码：<input type="text" name="phnumber" / id="phnum"><br /> 请输入你的身份证号码：<input
 			type="text" name="idnumber" id="idnum" /><br /> <input type="submit" name="submit" value="提交"
-			onclick="show()" />
-		<script>
+			/>
+		
+	</div>
+	</form>
+	<script>
 			//window.alert = function(){
 			alertFram.style.marginTop = "500px";
 			//}
@@ -31,6 +35,5 @@
 				//}
 			}
 		</script>
-	</div>
 </body>
 </html>

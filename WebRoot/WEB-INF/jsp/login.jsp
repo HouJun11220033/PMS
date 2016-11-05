@@ -33,7 +33,7 @@
 				class="tex" type="text" name="password" /> <br />
 			<div id="btn">
 				<input type="submit" name="login" value="登录"> <input type="button" name="cancel"
-					/ value="取消"> <a id="a1" href="register">注册</a>|<a href="#">找回</a>
+					/ value="取消"> <a id="a1" href="register">注册</a>|<a href="find">找回</a>
 		</form>
 
 	</div>

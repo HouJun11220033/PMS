@@ -8,4 +8,6 @@ public interface StaffService extends DaoSupport<Staff> {
 
 	public void registerInfo(Staff staff);
 
+	public boolean findIdNumByPhoneNum(String phoneNum, String idNum);
+
 }

@@ -65,4 +65,33 @@ public class StaffServiceImpl extends DaoSupportImpl<Staff> implements StaffServ
 		}
 	}
 
+	@Override
+	public boolean findIdNumByPhoneNum(String phoneNum, String idNum) {
+		boolean flag = false;
+		try {
+			session = HibernateUtil.getSession(); // get Session
+			transaction = session.beginTransaction(); // begin Session
+			Long count = (Long) session
+					.createQuery("select count(idCNum) from Staff s where s.phoneNum=:phoneNum")
+					.setParameter("phoneNum", phoneNum).uniqueResult();
+			transaction.commit(); // commit transaction
+			if (count > 0) {
+				System.out.println("Find Success !!!");
+				flag = true;
+			} else {
+				flag = false;
+			}
+
+
+		} catch (Exception e) {
+			System.out.println("staffDAO failure !");
+			transaction.rollback(); // roll back transaction
+		} finally {
+			HibernateUtil.closeSession(session); // close session
+
+		}
+		return flag;
+
+	}
+
 }
