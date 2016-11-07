@@ -17,7 +17,9 @@
 	-->
 </head>
 
+
 <body>
+
 	This is my JSP page.
 	<br>
 	<a href="pms/enter">Enter</a>

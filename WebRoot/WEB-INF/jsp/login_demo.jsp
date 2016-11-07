@@ -11,7 +11,7 @@
 <title>Slick Login</title>
 <meta name="description" content="slick Login">
 <meta name="author" content="Webdesigntuts+">
-<link rel="stylesheet" type="text/css" href="<%=path%>/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<%=path%>/css/style_login.css" />
 <script type="text/javascript" src="<%=path%>/js/placeholder.js"></script>
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-latest.min.js"></script>

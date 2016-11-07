@@ -30,6 +30,7 @@
 			alertFram.style.marginTop = "500px";
 			//}
 			function show() {
+
 				//if()
 				alert("你的密码是：");
 				//else{
