@@ -1,9 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":"
-			+ request.getServerPort() + path + "/";
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 <!DOCTYPE html>
 <head>
@@ -11,7 +12,8 @@
 <title>Slick Login</title>
 <meta name="description" content="slick Login">
 <meta name="author" content="Webdesigntuts+">
-<link rel="stylesheet" type="text/css" href="<%=path%>/css/style_login.css" />
+<link rel="stylesheet" type="text/css"
+	href="<%=path%>/css/style_login.css" />
 <script type="text/javascript" src="<%=path%>/js/placeholder.js"></script>
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-latest.min.js"></script>

@@ -1,0 +1,71 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#head{
+	font-size: 10px;
+	margin-left: 50px;
+}
+#logout{
+	text-decoration: none;
+	color: black;
+}
+#log{
+	width: 100%;
+	height: 120px;
+	background-image: url(../images/log玫瑰金2.jpg);
+}
+#img{
+	width: 15%;
+	height: 100%;
+	border: px solid black;
+	margin-left: 200px;
+	float: left;
+}
+#hname{
+	width: 45%;
+	height: 100%;
+	border: px solid black;
+	margin-left: 100px;
+	float: left;
+}
+#navigation{
+	text-align: center;
+	width: 15%;
+	height: 480px;
+	border: 1px solid black;
+	margin-left: 10%;
+	background-color: #cdae4f;
+	padding-top: 20px;
+	float: left;
+}
+#navigation a{
+	text-decoration: none;
+	line-height: 40px;
+	color: white;
+}
+#body0{
+	width: 65%;
+	height: 500px;
+	border: 1px solid black;
+	float: right;
+	float: left;
+}
+#body1,#body2,#body3,#body4,#body5,#body6,#body7{
+	display: none;
+	margin: 40px;
+}
+#body4 td{
+	border: 1px solid black;
+	width: 30px;
+	height: 30px;
+}
+#body7 table{
+	margin: auto;
+}
+#foot{
+	width: 100%;
+	height: 31px;
+	background-color: #cd924f;
+	clear: both;
+}
