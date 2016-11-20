@@ -1,42 +1,45 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":"
 			+ request.getServerPort() + path + "/";
 %>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8" />
-<title></title>
-<link href="<%=path%>/css/login.css" rel="stylesheet" type="text/css" />
-<!-- <link href="<%=path%>/css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
-<!-- <script type="text/javascript" src="<%=path%>/js/bootstrap.js>"></script> -->
+<title>Home</title>
+<!-- Custom Theme files -->
+<link href="<%=basePath%>/css/style_login_demo2.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
 
 </head>
 <body>
-	<!-- 	<script type="text/javascript"> -->
-	<!-- 		//添加用户   -->
-	<!-- 		function login() { -->
-	<!-- 			var form = document.forms[0]; -->
-	<!-- 			form.action = "/pms/login"; -->
-	<!-- 			//form.action = "${pageContext.request.contextPath}/user/addUser2";   -->
-	<!-- 			//form.action = "${pageContext.request.contextPath}/user/addUser3";   -->
-	<!-- 			form.method = "post"; -->
-	<!-- 			form.submit(); -->
-	<!-- 		} -->
-	</script>
-	<div id="reg">
+<div class="login">
+	<h2>登陆</h2>
+	<div class="login-top">
+		<h1>LOGIN FORM</h1>
 		<form action="login" method="post">
-			<a href="pms/login">用户名：</a> <input class="tex" type="text" name="username" /> <br /> 密&nbsp;码：<input
-				class="tex" type="text" name="password" /> <br />
-			<div id="btn">
-				<input type="submit" name="login" value="登录"> <input type="button" name="cancel"
-					/ value="取消"> <a id="a1" href="register">注册</a>|<a href="find">找回</a>
-		</form>
+			<input type="text" name="username" value="User Id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Id';}">
+			<input type="password" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+	    </form>
+	    <div class="forgot">
+	    	<a href="find">forgot Password</a>
+	    	<input type="submit" name="login" value="Login" >
+	    </div>
+	</div>
+	<div class="login-bottom">
+		<h3>New User &nbsp;<a href="register">Register</a>&nbsp Here</h3>
+	</div>
+</div>	
+<div class="copyright">
+	<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="">&#x7F51;&#x9875;&#x6A21;&#x677F;</a> - More Templates <a href="" target="_blank" title=""></a></p>
+</div>
 
-	</div>
-	</div>
+
 </body>
 </html>
