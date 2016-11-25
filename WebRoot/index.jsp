@@ -22,6 +22,6 @@
 
 	This is my JSP page.
 	<br>
-	<a href="pms/enter">Enter</a>
+	<a href="pms/front">Enter</a>
 </body>
 </html>

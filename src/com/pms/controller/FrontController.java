@@ -1,6 +1,7 @@
 package com.pms.controller;
 
 import org.hibernate.procedure.internal.Util.ResultClassesResolutionContext;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontController {
 	@RequestMapping("/front")
 	public String front(){
-		
-		return "front";
+
+		return "Front";
 	}
 
 }
